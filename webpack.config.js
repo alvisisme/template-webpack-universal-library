@@ -1,4 +1,4 @@
-/* global __dirname, require, module*/
+/* global __dirname, require, module */
 
 const webpack = require('webpack')
 const path = require('path')
@@ -12,7 +12,7 @@ let outputFile, mode, plugins
 if (env === 'build') {
   plugins = [
     new webpack.BannerPlugin({
-      banner: (pkg.name + ' v' + pkg.version + ' published at ' + (new Date()))
+      banner: (pkg.name + ' v' + pkg.version + ' published at ' + new Date().toLocaleString())
     })
   ]
   mode = 'production'

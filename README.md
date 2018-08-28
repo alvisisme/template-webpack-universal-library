@@ -1,18 +1,18 @@
-# Webpack library starter
+# 基于Webpack的通用库生成器
 
-Webpack based boilerplate for producing libraries (Input: ES6, Output: universal library)
+基于Webpack的用于生成库文件的模板（输入：ES6， 输出：通用库）
 
-![Travis](https://travis-ci.org/krasimir/webpack-library-starter.svg?branch=master)
+![Travis](https://travis-ci.org/alvisisme/template-webpack-universal-library.svg?branch=master)
 
-## Features
+## 特性
 
-* Webpack 4 based.
-* ES6 as a source.
-* Exports in a [umd](https://github.com/umdjs/umd) format so your library works everywhere.
-* ES6 test setup with [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
-* Linting with [ESLint](http://eslint.org/).
+* 基于Webpack 4
+* ES6语法编写
+* 导出为 [umd](https://github.com/umdjs/umd) 格式，让你的库在任何环境下工作
+* 使用 [Mocha](http://mochajs.org/) 和 [Chai](http://chaijs.com/) 进行ES6测试
+* 使用 [ESLint](http://eslint.org/) 进行代码检测
 
-## Process
+## 过程
 
 ```
 ES6 source files
@@ -27,37 +27,37 @@ ES6 source files
   in umd format
 ```
 
-*Have in mind that you have to build your library before publishing. The files under the `lib` folder are the ones that should be distributed.*
+*注意你必须在库发布库前进行构建，在 `lib` 目录下的文件就是你应该分发的文件*
 
-## Getting started
+## 准备开始
 
-1. Setting up the name of your library
-  * Open `webpack.config.js` file and change the value of `libraryName` variable.
-  * Open `package.json` file and change the value of `main` property so it matches the name of your library.
-2. Build your library
-  * Run `yarn install` (recommended) or `npm install` to get the project's dependencies
-  * Run `yarn build` or `npm run build` to produce minified version of your library.
-3. Development mode
-  * Having all the dependencies installed run `yarn dev` or `npm run dev`. This command will generate an non-minified version of your library and will run a watcher so you get the compilation on file change.
-4. Running the tests
-  * Run `yarn test` or `npm run test`
+1. 设置库的名字
+  * 打开 `webpack.config.js` 文件，修改 `libraryName` 变量值
+  * 打开 `package.json` 文件, 修改 `main` 属性以适配库的名字
+2. 构建库
+  * 运行 `yarn install` (推荐) 或 `npm install` 获得工程依赖
+  * 运行 `yarn build` 或 `npm run build` 来生成库的压缩版
+3. 开发模式
+  * 安装完所有依赖后运行 `yarn dev` 或 `npm run dev`, 这个命令会生成未压缩版的库文件，并且运行一个监听器来获得文件变动后的编译结果
+4. 运行测试
+  * 运行 `yarn test` 或 `npm run test`
 
-## Scripts
+## 脚本说明
 
-* `yarn build` or `npm run build` - produces production version of your library under the `lib` folder
-* `yarn dev` or `npm run dev` - produces development version of your library and runs a watcher
-* `yarn test` or `npm run test` - well ... it runs the tests :)
-* `yarn test:watch` or `npm run test:watch` - same as above but in a watch mode
+* `yarn build` 或 `npm run build` - 在 `lib` 目录下生成库的生产版本
+* `yarn dev` 或 `npm run dev` - 生成库的开发版本并运行一个监听器
+* `yarn test` 或 `npm run test` - 运行测试
+* `yarn test:watch` 或 `npm run test:watch` - 同上，但是以监听模式运行
 
-## Readings
+## 代码规范
 
-* [Start your own JavaScript library using webpack and ES6](http://krasimirtsonev.com/blog/article/javascript-library-starter-using-webpack-es6)
+基于 [JavaScript Standard Style ](https://standardjs.com/readme-zhcn.html)代码规范。
 
-## Misc
+## 杂项
 
-### An example of using dependencies that shouldn’t be resolved by webpack, but should become dependencies of the resulting bundle
+### 一个将依赖变为打包后结果的依赖而不是由webpack处理的依赖的例子 
 
-In the following example we are excluding React and Lodash:
+在下面的例子里我们剔除了 React 和 Lodash:
 
 ```js
 {
@@ -83,3 +83,8 @@ In the following example we are excluding React and Lodash:
   }
 }
 ```
+
+## 参考引用
+
+* [Start your own JavaScript library using webpack and ES6](http://krasimirtsonev.com/blog/article/javascript-library-starter-using-webpack-es6)
+* [krasimir/webpack-library-starter](https://github.com/krasimir/webpack-library-starter)

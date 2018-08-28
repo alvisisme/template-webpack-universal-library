@@ -1,8 +1,8 @@
 export default class Dog {
-  constructor() {
+  constructor () {
     this._name = 'Dog'
   }
-  get name() {
+  get name () {
     return this._name
   }
 }
