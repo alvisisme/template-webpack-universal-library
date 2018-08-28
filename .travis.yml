@@ -5,6 +5,4 @@ node_js:
   - 10
   - node
 before_script:  
-  - yarn install --offline
-script:
-  - ls -al node_modules/*
+  - yarn install --offline --ignore-engines
