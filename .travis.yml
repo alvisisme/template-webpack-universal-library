@@ -4,3 +4,7 @@ node_js:
   - 8
   - 10
   - node
+before_script:  
+  - yarn install --offline
+script:
+  - ls node_modules/.bin
